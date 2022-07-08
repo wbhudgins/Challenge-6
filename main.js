@@ -14,7 +14,7 @@ $(document).ready(function() {
 
       function getLocation(userInput) {
         $.ajax({
-            url: `http://api.openweathermap.org/geo/1.0/direct?q=${userInput}&appid=52d94025325c774103ea0abcd01e9658`,
+            url: `https://api.openweathermap.org/geo/1.0/direct?q=${userInput}&appid=52d94025325c774103ea0abcd01e9658`,
             success: function(data){ 
                 console.log(data)
                 console.log("User Input: " + userInput)
