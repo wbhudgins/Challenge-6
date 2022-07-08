@@ -44,17 +44,27 @@ $(document).ready(function() {
                 let currentWind = data.current.wind_speed
                 let currentHumidity = data.current.humidity
                 let currentUvi = data.current.uvi
+                console.log("UVI: " + currentUvi)
 
                 if(currentUvi >= 0 && currentUvi <= 2) {
+                    $('#uvi').removeClass("has-background-danger")
+                    $('#uvi').removeClass("has-background-warning")
                     $('#uvi').addClass("has-background-success")
+                    console.log("I'm here 1")
                 } 
                 
                 if (currentUvi >= 3 && currentUvi <= 7) {
+                    $('#uvi').removeClass("has-background-success")
+                    $('#uvi').removeClass("has-background-danger")
                     $('#uvi').addClass("has-background-warning")
+                    console.log("I'm here 2")
                 } 
                 
-                if (currentUvi >= 8) {
+                if (currentUvi >= 7) {
+                    $('#uvi').removeClass("has-background-success")
+                    $('#uvi').removeClass("has-background-warning")
                     $('#uvi').addClass("has-background-danger")
+                    console.log("I'm here 3")
                 }
                 console.log("Current Day: " + currentDay)
 
